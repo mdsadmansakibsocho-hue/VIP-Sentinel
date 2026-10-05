@@ -2,7 +2,7 @@ require("dotenv").config();
 const list=v=>(v||"").split(",").map(x=>x.trim()).filter(Boolean);
 module.exports={
  token:process.env.DISCORD_TOKEN,
- ownerId:process.env.OWNER_ID,
+ ownerId:process.env.OWNER_USERNAME,
  trusted:list(process.env.TRUSTED_USER_IDS),
  raidThreshold:+(process.env.RAID_JOIN_THRESHOLD||6),
  raidWindow:+(process.env.RAID_JOIN_WINDOW_SECONDS||10),
